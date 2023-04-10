@@ -20,8 +20,9 @@ list.forEach((item) =>
 item.addEventListener('mouseover', activeLink));
 
 // load data //
-let file_path = 'https://raw.githubusercontent.com/jokoeliyanto/web-dashboard-from-scratch/main/data_all_agg_pkm.csv'
-    
+let file_path = 'https://raw.githubusercontent.com/jokoeliyanto/web-dashboard-from-scratch/main/data_all_agg_pkm.csv';
+let warna_p = 'https://raw.githubusercontent.com/jokoeliyanto/web-dashboard-from-scratch/main/warna_penyakit.csv';
+
 var dt = await aq.loadCSV(file_path);
 
 console.log('Initial Data')
@@ -35,6 +36,18 @@ const kec_filter    = document.getElementById("kec_filter");
 // const fks_filter    = document.getElementById("fks_filter");
 const start_date    = document.getElementById("start_date");
 const end_date      = document.getElementById("end_date");
+
+var  dt_prov =  dt
+                .filter(aq.escape(d =>  d.provinsi      === 'BALI'));
+var  dt_kab  =  dt
+                .filter(aq.escape(d =>  d.provinsi      === 'BALI'))
+                .filter(aq.escape(d =>  d.kabupaten     === 'KAB. BADUNG'));
+var  dt_kec  =  dt
+                .filter(aq.escape(d =>  d.provinsi      === 'BALI'))
+                .filter(aq.escape(d =>  d.kabupaten     === 'KAB. BADUNG'))
+                .filter(aq.escape(d =>  d.kecamatan     === 'ABIANSEMAL'));
+
+console.log("CHILDREn", kab_filter)
 
 const filter_prov_ar = [... new Set(dt.array('provinsi').sort())];
 const filter_kab_ar  = [... new Set(dt.array('kabupaten').sort())];
@@ -228,6 +241,8 @@ const cdd_data = {
     datasets: [{
         label: 'Kasus',
         data: data_2.array('jumlah_kasus'),
+        backgroundColor:  data_2.array('color'),
+        borderColor:  data_2.array('color'),
         borderWidth: 1,
         
     }]
@@ -298,34 +313,54 @@ const cdt_data = {
     datasets: [
         {
             label: 'Diare Akut',
-            data: data_3.filter(d => d.penyakit === 'Diare Akut').array('jumlah_kasus')},
+            data: data_3.filter(d => d.penyakit === 'Diare Akut').array('jumlah_kasus'),
+            backgroundColor:'#9ebcda',
+            borderColor:'#9ebcda'},
         {
             label: 'Malaria Konfirmasi',
-            data: data_3.filter(d => d.penyakit === 'Malaria Konfirmasi').array('jumlah_kasus')},
+            data: data_3.filter(d => d.penyakit === 'Malaria Konfirmasi').array('jumlah_kasus'),
+            backgroundColor:'#fdbb84',
+            borderColor:'#fdbb84'},
         {
             label: 'ILI (Penyakit Serupa Influenza)',
-            data: data_3.filter(d => d.penyakit === 'ILI (Penyakit Serupa Influenza)').array('jumlah_kasus')},
+            data: data_3.filter(d => d.penyakit === 'ILI (Penyakit Serupa Influenza)').array('jumlah_kasus'),
+            backgroundColor:'#a8ddb5',
+            borderColor:'#a8ddb5'},
         {
             label: 'Suspek COVID-19',
-            data: data_3.filter(d => d.penyakit === 'Suspek COVID-19').array('jumlah_kasus')},
+            data: data_3.filter(d => d.penyakit === 'Suspek COVID-19').array('jumlah_kasus'),
+            backgroundColor:'#2b8cbe',
+            borderColor:'#2b8cbe'},
         {
             label: 'Pnemonia',
-            data: data_3.filter(d => d.penyakit === 'Pnemonia').array('jumlah_kasus')},
+            data: data_3.filter(d => d.penyakit === 'Pnemonia').array('jumlah_kasus'),
+            backgroundColor:'#a6bddb',
+            borderColor:'#a6bddb'},
         {
             label: 'Diare Berdarah/ Disentri',
-            data: data_3.filter(d => d.penyakit === 'Diare Berdarah/ Disentri').array('jumlah_kasus')},
+            data: data_3.filter(d => d.penyakit === 'Diare Berdarah/ Disentri').array('jumlah_kasus'),
+            backgroundColor:'#8856a7',
+            borderColor:'#8856a7'},
         {
             label: 'Suspek Demam Tifoid',
-            data: data_3.filter(d => d.penyakit === 'Suspek Demam Tifoid').array('jumlah_kasus')},
+            data: data_3.filter(d => d.penyakit === 'Suspek Demam Tifoid').array('jumlah_kasus'),
+            backgroundColor:'#c994c7',
+            borderColor:'#c994c7'},
         {
             label: 'Sindrom Jaundice Akut',
-            data: data_3.filter(d => d.penyakit === 'Sindrom Jaundice Akut').array('jumlah_kasus')},
+            data: data_3.filter(d => d.penyakit === 'Sindrom Jaundice Akut').array('jumlah_kasus'),
+            backgroundColor:'#ece2f0',
+            borderColor:'#ece2f0'},
         {
             label: 'Suspek Chikungunya',
-            data: data_3.filter(d => d.penyakit === 'Suspek Chikungunya').array('jumlah_kasus')},
+            data: data_3.filter(d => d.penyakit === 'Suspek Chikungunya').array('jumlah_kasus'),
+            backgroundColor:'#c51b8a',
+            borderColor:'#c51b8a'},
         {
             label: 'Suspek Meningitis/Encephalitis',
-            data: data_3.filter(d => d.penyakit === 'Suspek Meningitis/Encephalitis').array('jumlah_kasus')}
+            data: data_3.filter(d => d.penyakit === 'Suspek Meningitis/Encephalitis').array('jumlah_kasus'),
+            backgroundColor:'#7fcdbb',
+            borderColor:'#7fcdbb'}
     ]
 }
 
@@ -354,8 +389,8 @@ let line_cdt = new Chart(cty, {
         },
         plugins: {
             legend: {
-                display: true,
-                position: 'right'
+                display: false,
+                // position: 'right'
             },
             title: {
                 display: true,
@@ -396,6 +431,8 @@ const rdd_data = {
     datasets: [{
         label: 'Kasus',
         data: data_4.array('jumlah_kasus'),
+        backgroundColor:  data_4.array('color'),
+        borderColor:  data_4.array('color'),
         borderWidth: 1,
         
     }]
@@ -467,40 +504,59 @@ const rdt_data = {
     datasets: [
         {
             label: 'Suspek HFMD',
-            data: data_5.filter(d => d.penyakit === 'Suspek HFMD').array('jumlah_kasus')},
+            data: data_5.filter(d => d.penyakit === 'Suspek HFMD').array('jumlah_kasus'),
+            backgroundColor:'#f7fcb9',
+            borderColor:'#f7fcb9'},
         {
             label: 'Suspek Tetanus',
-            data: data_5.filter(d => d.penyakit === 'Suspek Tetanus').array('jumlah_kasus')},
+            data: data_5.filter(d => d.penyakit === 'Suspek Tetanus').array('jumlah_kasus'),
+            backgroundColor:'#2ca25f',
+            borderColor:'#2ca25f'},
         {
             label: 'Gigitan Hewan Penular Rabies',
-            data: data_5.filter(d => d.penyakit === 'Gigitan Hewan Penular Rabies').array('jumlah_kasus')},
+            data: data_5.filter(d => d.penyakit === 'Gigitan Hewan Penular Rabies').array('jumlah_kasus'),
+            backgroundColor:'#43a2ca',
+            borderColor:'#43a2ca'},
         {
             label: 'Suspek Campak',
-            data: data_5.filter(d => d.penyakit === 'Suspek Campak').array('jumlah_kasus')},  
+            data: data_5.filter(d => d.penyakit === 'Suspek Campak').array('jumlah_kasus'),
+            backgroundColor:'#e34a33',
+            borderColor:'#e34a33'},  
         {
             label: 'Suspek Kolera',
-            data: data_5.filter(d => d.penyakit === 'Suspek Kolera').array('jumlah_kasus')},
+            data: data_5.filter(d => d.penyakit === 'Suspek Kolera').array('jumlah_kasus'),
+            backgroundColor:'#1c9099',
+            borderColor:'#1c9099'},
         {
             label: 'Acute Flacid Paralysis (AFP)',
-            data: data_5.filter(d => d.penyakit === 'Acute Flacid Paralysis (AFP)').array('jumlah_kasus')},
+            data: data_5.filter(d => d.penyakit === 'Acute Flacid Paralysis (AFP)').array('jumlah_kasus'),
+            backgroundColor:'#d95f0e',
+            borderColor:'#d95f0e'},
         {
             label: 'Pertussis',
-            data: data_5.filter(d => d.penyakit === 'Pertussis').array('jumlah_kasus')},
+            data: data_5.filter(d => d.penyakit === 'Pertussis').array('jumlah_kasus'),
+            backgroundColor:'#dd1c77',
+            borderColor:'#dd1c77'},
         {
             label: 'Suspek Leptospirosis',
-            data: data_5.filter(d => d.penyakit === 'Suspek Leptospirosis').array('jumlah_kasus')},
-        {
-            label: 'Sindrom Jaundice Akut',
-            data: data_5.filter(d => d.penyakit === 'Sindrom Jaundice Akut').array('jumlah_kasus')},
+            data: data_5.filter(d => d.penyakit === 'Suspek Leptospirosis').array('jumlah_kasus'),
+            backgroundColor:'#756bb1',
+            borderColor:'#756bb1'},
         {
             label: 'Kluster Penyakit yang tidak lazim',
-            data: data_5.filter(d => d.penyakit === 'Kluster Penyakit yang tidak lazim').array('jumlah_kasus')},
+            data: data_5.filter(d => d.penyakit === 'Kluster Penyakit yang tidak lazim').array('jumlah_kasus'),
+            backgroundColor:'#bdbdbd',
+            borderColor:'#bdbdbd'},
         {
             label: 'Suspek Tetanus Neonatorum',
-            data: data_5.filter(d => d.penyakit === 'Suspek Tetanus Neonatorum').array('jumlah_kasus')},
+            data: data_5.filter(d => d.penyakit === 'Suspek Tetanus Neonatorum').array('jumlah_kasus'),
+            backgroundColor:'#e5f5e0',
+            borderColor:'#e5f5e0'},
         {
             label: 'Suspek Difteri',
-            data: data_5.filter(d => d.penyakit === 'Suspek Difteri').array('jumlah_kasus')}        
+            data: data_5.filter(d => d.penyakit === 'Suspek Difteri').array('jumlah_kasus'),
+            backgroundColor:'#fde0dd',
+            borderColor:'#fde0dd'}          
     ]
 }
 
@@ -529,8 +585,8 @@ let line_rdt = new Chart(cta, {
         },
         plugins: {
             legend: {
-                display: true,
-                position: 'right'
+                display: false,
+                // position: 'right'
             },
             title: {
                 display: true,
@@ -545,86 +601,94 @@ let line_rdt = new Chart(cta, {
 });    
 
 /// fsy x dis heatmap
-let data_6 = dt_filter
-            .filter(d => d.penyakit == 'ILI (Penyakit Serupa Influenza')
-            .groupby('fasyankes')
-            .rollup({jumlah_kasus: d => op.sum(d.kasus)})
-            .orderby('tanggal');
+// let data_6 = dt_filter
+//             .filter(d => d.penyakit == 'ILI (Penyakit Serupa Influenza')
+//             .groupby('fasyankes')
+//             .rollup({jumlah_kasus: d => op.sum(d.kasus)})
+//             .orderby('tanggal');
 
-console.log("Group By")
-console.log(data_6.print());
+// console.log("Group By")
+// console.log(data_6.print());
 
-const hm_data = {
-    labels: [... new Set(data_6.array('tanggal'))],
-    datasets: [
-        {
-            label: 'ILI (Penyakit Serupa Influenza)',
-            data: data_6.filter(d => d.penyakit === 'ILI (Penyakit Serupa Influenza').array('jumlah_kasus')
-        }
-    ]
-}
+// const hm_data = {
+//     labels: [... new Set(data_6.array('tanggal'))],
+//     datasets: [
+//         {
+//             label: 'ILI (Penyakit Serupa Influenza)',
+//             data: data_6.filter(d => d.penyakit === 'ILI (Penyakit Serupa Influenza').array('jumlah_kasus')
+//         }
+//     ]
+// }
 
-const ctb = document.getElementById("hm_disweek");
-console.log(ctb);
-let hm_disweek = new Chart(ctb, {
-    type: 'matrix',
-    data: hm_data,
-    options: {
-        plugins: {
-            legend: true,
-            tooltip: {
-                callbacks: {
-                    title() {
-                        return '';
-                    },
-                    label(context) {
-                        const v = context.dataset.data[context.dataIndex];
-                        return ['Tanggal: ' + d.tanggal, 'Fasyankes: ' + d.fasyankes, 'Kasus: ' + d.jumlah_kasus];
-                    }
-                }
-            }
-        },
-        scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: 'Tanggal'
-                }
-            },
-            x: {
-                title: {
-                    display: true,
-                    text: 'Fasyankes'
-                }
-            },
-            indexAxis: y,
-            plugins: {
-                title: {
-                    display: true,
-                    position: 'top',
-                    align: 'center',
-                    text: 'Heatmap Fasyankes x Disease',
-                    font: {
-                        size: 18
-                    }
-                }
-            }
-        }
-    }
-});
+// const ctb = document.getElementById("hm_disweek");
+// console.log(ctb);
+// let hm_disweek = new Chart(ctb, {
+//     type: 'matrix',
+//     data: hm_data,
+//     options: {
+//         plugins: {
+//             legend: true,
+//             tooltip: {
+//                 callbacks: {
+//                     title() {
+//                         return '';
+//                     },
+//                     label(context) {
+//                         const v = context.dataset.data[context.dataIndex];
+//                         return ['Tanggal: ' + d.tanggal, 'Fasyankes: ' + d.fasyankes, 'Kasus: ' + d.jumlah_kasus];
+//                     }
+//                 }
+//             }
+//         },
+//         scales: {
+//             y: {
+//                 beginAtZero: true,
+//                 title: {
+//                     display: true,
+//                     text: 'Tanggal'
+//                 }
+//             },
+//             x: {
+//                 title: {
+//                     display: true,
+//                     text: 'Fasyankes'
+//                 }
+//             },
+//             indexAxis: y,
+//             plugins: {
+//                 title: {
+//                     display: true,
+//                     position: 'top',
+//                     align: 'center',
+//                     text: 'Heatmap Fasyankes x Disease',
+//                     font: {
+//                         size: 18
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// });
 
 ///
 
 prov_filter.addEventListener('change', filterData);
 kab_filter.addEventListener('change', filterData);
-kec_filter.addEventListener('change', filterData);
+kec_filter.addEventListener('change', filterData2);
 // fks_filter.addEventListener('change', filterData);
 start_date.addEventListener('change', filterData);
 end_date.addEventListener('change', filterData);
 
+function updateFilterDropdown(){
+    
+}
+
 // Filter Data Function
 function filterData() {
+    var prov_filter   = document.getElementById("prov_filter");
+    var kab_filter    = document.getElementById("kab_filter");
+    var kec_filter    = document.getElementById("kec_filter");
+
     var prov_select = prov_filter.value;
     var kab_select  = kab_filter.value;
     var kec_select  = kec_filter.value;
@@ -634,6 +698,114 @@ function filterData() {
 
     let start_date_filter = new Date(start_date_select)
     let end_date_filter = new Date(end_date_select)
+
+    var  dt_prov =  dt
+                .filter(aq.escape(d =>  d.provinsi      === prov_select));
+    var  dt_kab  =  dt
+                    .filter(aq.escape(d =>  d.provinsi      === prov_select))
+                    .filter(aq.escape(d =>  d.kabupaten     === kab_select));
+
+    var filter_prov_ar2 = [... new Set(dt.array('provinsi').sort())];
+    var filter_kab_ar2  = [... new Set(dt_prov.array('kabupaten').sort())];
+    var filter_kec_ar2  = [... new Set(dt_kab.array('kecamatan').sort())];
+
+    var options = document.querySelectorAll('#prov_filter option')
+    options.forEach(o => o.remove());
+    
+    filter_prov_ar2.forEach(function (item){
+        let o = document.createElement("option");
+        o.text = item;
+        o.value = item;
+    prov_filter.appendChild(o);
+    prov_filter.value = prov_select;
+    });
+
+    console.log("Array Baru", filter_kab_ar2)
+    var options = document.querySelectorAll('#kab_filter option')
+        options.forEach(o => o.remove());
+    
+    filter_kab_ar2.forEach(function (item){
+        let o = document.createElement("option");
+        o.text = item;
+        o.value = item;
+    kab_filter.appendChild(o);
+    kab_filter.value = kab_select;
+    });
+
+    var options = document.querySelectorAll('#kec_filter option')
+    options.forEach(o => o.remove());
+    filter_kec_ar2.forEach(function (item){
+        let o = document.createElement("option");
+        o.text = item;
+        o.value = item;
+    kec_filter.appendChild(o);
+    });    
+    var prov_filter   = document.getElementById("prov_filter");
+    var kab_filter    = document.getElementById("kab_filter");
+    var kec_filter    = document.getElementById("kec_filter");
+
+    var prov_select = prov_filter.value;
+    var kab_select  = kab_filter.value;
+    var kec_select  = kec_filter.value;
+    var start_date_select  = start_date.value;
+    var end_date_select  = end_date.value;
+
+    var  dt_prov =  dt
+                .filter(aq.escape(d =>  d.provinsi      === prov_select));
+    var  dt_kab  =  dt
+                    .filter(aq.escape(d =>  d.provinsi      === prov_select))
+                    .filter(aq.escape(d =>  d.kabupaten     === kab_select));
+
+    var filter_prov_ar2 = [... new Set(dt.array('provinsi').sort())];
+    var filter_kab_ar2  = [... new Set(dt_prov.array('kabupaten').sort())];
+    var filter_kec_ar2  = [... new Set(dt_kab.array('kecamatan').sort())];
+
+    var options = document.querySelectorAll('#prov_filter option')
+    options.forEach(o => o.remove());
+    
+    filter_prov_ar2.forEach(function (item){
+        let o = document.createElement("option");
+        o.text = item;
+        o.value = item;
+    prov_filter.appendChild(o);
+    prov_filter.value = prov_select;
+    });
+
+    console.log("Array Baru", filter_kab_ar2)
+    var options = document.querySelectorAll('#kab_filter option')
+        options.forEach(o => o.remove());
+    
+    filter_kab_ar2.forEach(function (item){
+        let o = document.createElement("option");
+        o.text = item;
+        o.value = item;
+    kab_filter.appendChild(o);
+    kab_filter.value = kab_select;
+    });
+
+    var options = document.querySelectorAll('#kec_filter option')
+    options.forEach(o => o.remove());
+    filter_kec_ar2.forEach(function (item){
+        let o = document.createElement("option");
+        o.text = item;
+        o.value = item;
+    kec_filter.appendChild(o);
+    });
+
+    var prov_filter   = document.getElementById("prov_filter");
+    var kab_filter    = document.getElementById("kab_filter");
+    var kec_filter    = document.getElementById("kec_filter");
+
+    var prov_select2 = prov_filter.value;
+    var kab_select2  = kab_filter.value;
+    var kec_select2  = kec_filter.value;
+
+    console.log('Sebelum', prov_select)
+    console.log('Sesudah', prov_select2)
+    console.log('Sebelum', kab_select)
+    console.log('Sesudah', kab_select2)
+    console.log('Sebelum', kec_select)
+    console.log('Sesudah', kec_select2)
 
     let dt_fltr2 = dt
                 .filter(aq.escape(d =>  d.tanggal >= start_date_filter && d.tanggal <= end_date_filter))
@@ -718,6 +890,8 @@ function filterData() {
         datasets: [{
             label: 'Kasus',
             data: data_2_2.array('jumlah_kasus'),
+            backgroundColor: data_2_2.array('color'),
+            borderColor: data_2_2.array('color'),
             borderWidth: 1,
             
         }]
@@ -748,34 +922,54 @@ function filterData() {
         datasets: [
             {
                 label: 'Diare Akut',
-                data: data_3_2.filter(d => d.penyakit === 'Diare Akut').array('jumlah_kasus')},
+                data: data_3_2.filter(d => d.penyakit === 'Diare Akut').array('jumlah_kasus'),
+                backgroundColor:'#9ebcda',
+                borderColor:'#9ebcda'},
             {
                 label: 'Malaria Konfirmasi',
-                data: data_3_2.filter(d => d.penyakit === 'Malaria Konfirmasi').array('jumlah_kasus')},
+                data: data_3_2.filter(d => d.penyakit === 'Malaria Konfirmasi').array('jumlah_kasus'),
+                backgroundColor:'#fdbb84',
+                borderColor:'#fdbb84'},
             {
                 label: 'ILI (Penyakit Serupa Influenza)',
-                data: data_3_2.filter(d => d.penyakit === 'ILI (Penyakit Serupa Influenza)').array('jumlah_kasus')},
+                data: data_3_2.filter(d => d.penyakit === 'ILI (Penyakit Serupa Influenza)').array('jumlah_kasus'),
+                backgroundColor:'#a8ddb5',
+                borderColor:'#a8ddb5'},
             {
                 label: 'Suspek COVID-19',
-                data: data_3_2.filter(d => d.penyakit === 'Suspek COVID-19').array('jumlah_kasus')},
+                data: data_3_2.filter(d => d.penyakit === 'Suspek COVID-19').array('jumlah_kasus'),
+                backgroundColor:'#2b8cbe',
+                borderColor:'#2b8cbe'},
             {
                 label: 'Pnemonia',
-                data: data_3_2.filter(d => d.penyakit === 'Pnemonia').array('jumlah_kasus')},
+                data: data_3_2.filter(d => d.penyakit === 'Pnemonia').array('jumlah_kasus'),
+                backgroundColor:'#a6bddb',
+                borderColor:'#a6bddb'},
             {
                 label: 'Diare Berdarah/ Disentri',
-                data: data_3_2.filter(d => d.penyakit === 'Diare Berdarah/ Disentri').array('jumlah_kasus')},
+                data: data_3_2.filter(d => d.penyakit === 'Diare Berdarah/ Disentri').array('jumlah_kasus'),
+                backgroundColor:'#8856a7',
+                borderColor:'#8856a7'},
             {
                 label: 'Suspek Demam Tifoid',
-                data: data_3_2.filter(d => d.penyakit === 'Suspek Demam Tifoid').array('jumlah_kasus')},
+                data: data_3_2.filter(d => d.penyakit === 'Suspek Demam Tifoid').array('jumlah_kasus'),
+                backgroundColor:'#c994c7',
+                borderColor:'#c994c7'},
             {
                 label: 'Sindrom Jaundice Akut',
-                data: data_3_2.filter(d => d.penyakit === 'Sindrom Jaundice Akut').array('jumlah_kasus')},
+                data: data_3_2.filter(d => d.penyakit === 'Sindrom Jaundice Akut').array('jumlah_kasus'),
+                backgroundColor:'#ece2f0',
+                borderColor:'#ece2f0'},
             {
                 label: 'Suspek Chikungunya',
-                data: data_3_2.filter(d => d.penyakit === 'Suspek Chikungunya').array('jumlah_kasus')},
+                data: data_3_2.filter(d => d.penyakit === 'Suspek Chikungunya').array('jumlah_kasus'),
+                backgroundColor:'#c51b8a',
+                borderColor:'#c51b8a'},
             {
                 label: 'Suspek Meningitis/Encephalitis',
-                data: data_3_2.filter(d => d.penyakit === 'Suspek Meningitis/Encephalitis').array('jumlah_kasus')}
+                data: data_3_2.filter(d => d.penyakit === 'Suspek Meningitis/Encephalitis').array('jumlah_kasus'),
+                backgroundColor:'#7fcdbb',
+                borderColor:'#7fcdbb'}
         ]
     };
 
@@ -804,8 +998,10 @@ function filterData() {
         datasets: [{
             label: 'Kasus',
             data: data_4_2.array('jumlah_kasus'),
+            backgroundColor:  data_4_2.array('color'),
+            borderColor:  data_4_2.array('color'),
             borderWidth: 1,
-            
+
         }]
     };
 
@@ -834,40 +1030,59 @@ function filterData() {
         datasets: [
             {
                 label: 'Suspek HFMD',
-                data: data_5_2.filter(d => d.penyakit === 'Suspek HFMD').array('jumlah_kasus')},
+                data: data_5_2.filter(d => d.penyakit === 'Suspek HFMD').array('jumlah_kasus'),
+                backgroundColor:'#f7fcb9',
+                borderColor:'#f7fcb9'},
             {
                 label: 'Suspek Tetanus',
-                data: data_5_2.filter(d => d.penyakit === 'Suspek Tetanus').array('jumlah_kasus')},
+                data: data_5_2.filter(d => d.penyakit === 'Suspek Tetanus').array('jumlah_kasus'),
+                backgroundColor:'#2ca25f',
+                borderColor:'#2ca25f'},
             {
                 label: 'Gigitan Hewan Penular Rabies',
-                data: data_5_2.filter(d => d.penyakit === 'Gigitan Hewan Penular Rabies').array('jumlah_kasus')},
+                data: data_5_2.filter(d => d.penyakit === 'Gigitan Hewan Penular Rabies').array('jumlah_kasus'),
+                backgroundColor:'#43a2ca',
+                borderColor:'#43a2ca'},
             {
                 label: 'Suspek Campak',
-                data: data_5_2.filter(d => d.penyakit === 'Suspek Campak').array('jumlah_kasus')},  
+                data: data_5_2.filter(d => d.penyakit === 'Suspek Campak').array('jumlah_kasus'),
+                backgroundColor:'#e34a33',
+                borderColor:'#e34a33'},  
             {
                 label: 'Suspek Kolera',
-                data: data_5_2.filter(d => d.penyakit === 'Suspek Kolera').array('jumlah_kasus')},
+                data: data_5_2.filter(d => d.penyakit === 'Suspek Kolera').array('jumlah_kasus'),
+                backgroundColor:'#1c9099',
+                borderColor:'#1c9099'},
             {
                 label: 'Acute Flacid Paralysis (AFP)',
-                data: data_5_2.filter(d => d.penyakit === 'Acute Flacid Paralysis (AFP)').array('jumlah_kasus')},
+                data: data_5_2.filter(d => d.penyakit === 'Acute Flacid Paralysis (AFP)').array('jumlah_kasus'),
+                backgroundColor:'#d95f0e',
+                borderColor:'#d95f0e'},
             {
                 label: 'Pertussis',
-                data: data_5_2.filter(d => d.penyakit === 'Pertussis').array('jumlah_kasus')},
+                data: data_5_2.filter(d => d.penyakit === 'Pertussis').array('jumlah_kasus'),
+                backgroundColor:'#dd1c77',
+                borderColor:'#dd1c77'},
             {
                 label: 'Suspek Leptospirosis',
-                data: data_5_2.filter(d => d.penyakit === 'Suspek Leptospirosis').array('jumlah_kasus')},
-            {
-                label: 'Sindrom Jaundice Akut',
-                data: data_5_2.filter(d => d.penyakit === 'Sindrom Jaundice Akut').array('jumlah_kasus')},
+                data: data_5_2.filter(d => d.penyakit === 'Suspek Leptospirosis').array('jumlah_kasus'),
+                backgroundColor:'#756bb1',
+                borderColor:'#756bb1'},
             {
                 label: 'Kluster Penyakit yang tidak lazim',
-                data: data_5_2.filter(d => d.penyakit === 'Kluster Penyakit yang tidak lazim').array('jumlah_kasus')},
+                data: data_5_2.filter(d => d.penyakit === 'Kluster Penyakit yang tidak lazim').array('jumlah_kasus'),
+                backgroundColor:'#bdbdbd',
+                borderColor:'#bdbdbd'},
             {
                 label: 'Suspek Tetanus Neonatorum',
-                data: data_5_2.filter(d => d.penyakit === 'Suspek Tetanus Neonatorum').array('jumlah_kasus')},
+                data: data_5_2.filter(d => d.penyakit === 'Suspek Tetanus Neonatorum').array('jumlah_kasus'),
+                backgroundColor:'#e5f5e0',
+                borderColor:'#e5f5e0'},
             {
                 label: 'Suspek Difteri',
-                data: data_5_2.filter(d => d.penyakit === 'Suspek Difteri').array('jumlah_kasus')}        
+                data: data_5_2.filter(d => d.penyakit === 'Suspek Difteri').array('jumlah_kasus'),
+                backgroundColor:'#fde0dd',
+                borderColor:'#fde0dd'}        
         ]
     }
 
@@ -875,3 +1090,13 @@ function filterData() {
     line_rdt.update()
 
 };
+
+// Coba Filter Data Menggunakan Array
+
+var kab_array = ['ABIANSEMAL'];
+dt
+.params({
+kab:kab_array
+})
+.filter((d, $) => op.includes($.kab, d.kecamatan))
+.print()
