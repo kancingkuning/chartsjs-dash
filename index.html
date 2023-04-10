@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semoga Jadi Dashboard</title>
+    <!-- importing all library -->
+
+    <!-- arquero -->
+    <script src="https://cdn.jsdelivr.net/npm/arquero@latest"></script>
+    <!-- chartjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@1.1.0/dist/chartjs-chart-matrix.min.js"></script>
+    <!-- ion icon  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+</head>
+<body>
+    <div class = "container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href=""#>
+                        <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                        <span class="title">EWARS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href=""#>
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href=""#>
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href=""#>
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href=""#>
+                        <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href=""#>
+                        <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                        <span class="title">Developer</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <!--Search-->
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <!--User Image-->
+                <div class="user">
+                    <img src="user.png">
+                </div>
+            </div>
+
+            <!-- wording -->
+            <div class="judul" id="d1">
+                <h1>SISHIS Dashboard (Puskesmas) - Fasyankes Level</h1>
+                <br>
+                <h3>Secure and Interoperable Surveillance and Health Information System</h3>
+            </div>
+            <div class="deskripsi">
+                <p>Sistem Kewaspadaan Dini dan Respon (SKDR) adalah suatu sistem yang dapat memantau perkembangan trend suatu penyakit menular potensial 
+                    KLB/wabah dari waktu ke waktu (periode mingguan) dan memberikan sinyal peringatan (alert) kepada pengelola program bila kasus tersebut 
+                    melebihi nilai ambang batasnya sehingga mendorong program untuk melakukan respons.</p>
+            </div>
+
+            <div class="filterCard">
+                <span class="filterBox">
+                    <p class="button_title">Provinsi: &nbsp;</p>
+                    <select name="prov" id="prov_filter"></select>
+                </span>
+        
+                <span class="filterBox">
+                    <p class="button_title">Kabupaten: &nbsp;</p>
+                    <select name="kab" id="kab_filter"></select>
+                </span>
+        
+                <span class="filterBox">
+                    <p class="button_title">Kecamatan: &nbsp;</p>
+                    <select onchange= "filterData()" name="kec" id="kec_filter"></select>
+                </span>
+        
+                <!-- <span class="filterBox">
+                    <p class="button_title">  Fasyankes &nbsp;&nbsp;</p>
+                    <br>
+                    <select  name="fks" id="fks_filter"></select>
+                </span> -->
+        
+                <span class="filterBox">
+                    <p class="button_title">Start Date: &nbsp;</p>
+                    <input  type="date" name="start_date" id="start_date" value="2022-12-01">
+                </span>
+        
+                <span class="filterBox">
+                    <p class="button_title">End Date: &nbsp;</p>
+                    <input  type="date" name="end_date" id="end_date" value="2022-12-31">
+                </span>
+            </div>
+
+            <!-- filter -->
+            <div class="summaryCard">
+                <div class="summaryBox">
+                    <div class="one">
+                        <ui class="card_title">District Detail</ui>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="navigate-circle-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="summaryBox">
+                    <div class="two">
+                        <ui class="card_title">Cumulative Cases</ui>
+                            <p class="calc" id="cum_case"></p>
+                            <p class="ket">Total Cases</p>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="summaryBox">
+                    <div class="three">
+                        <ui class="card_title">All Visits</ui>
+                        <p class="calc" id="tot_vis"></p>
+                        <p class="ket">Total Cases</p>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="warning-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="summaryBox">
+                    <div class="four">
+                        <ui class="card_title">Year Week</ui>
+                        <p class="calc" id="week"></p>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="summaryBox">
+                    <div class="five">
+                        <ui class="card_title">Disease Detail</ui>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="medkit-outline"></ion-icon>
+                    </div>
+                </div>
+
+            </div>
+            <!-- charts -->
+            <div class="graphBox">
+                <div class="box" id="geomap"></div>
+                <div class="box">
+                    <canvas id="bar_cbf"></canvas>
+                </div>
+                <div class="box">
+                    <canvas id="bar_cdd"></canvas>
+                </div>
+                <div class="box">
+                    <canvas id="line_cdt"></canvas>
+                </div>
+                <div class="box">
+                    <canvas id="bar_rdd"></canvas>
+                </div>
+                <div class="box">
+                    <canvas id="line_rdt"></canvas>
+                </div>
+            </div>
+            <div class="hmbox">
+                <div class="box">
+                    <canvas id="hm_disweek"></canvas>
+                </div>
+            </div>
+        </div>
+        
+
+    <!-- isian -->
+    <script type = "module" src="index.js"></script>
+</body>
+</html>
