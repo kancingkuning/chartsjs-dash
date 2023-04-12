@@ -43,13 +43,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href=""#>
+                    <a href="./x.html">
                         <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href=""#>
+                    <a href="https://www.google.com/">
                         <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
                         <span class="title">Settings</span>
                     </a>
@@ -101,19 +101,20 @@
             </div>
 
             <div class="filterCard">
+
                 <span class="filterBox">
-                    <p class="button_filter">Provinsi: &nbsp;</p>
-                    <select name="prov" id="prov_filter" multiple="multiple" style="width: 200px" ></select>
+                    <p>Provinsi: &nbsp;</p>
+                    <select  class="button_filter" onchange="filterData()" name="prov" id="prov_filter" multiple="multiple" style="width: 200px" ></select>
                 </span>
         
                 <span class="filterBox">
-                    <p class="button_filter">Kabupaten: &nbsp;</p>
-                    <select name="kab" id="kab_filter" multiple="multiple" style="width: 200px" ></select>
+                    <p>Kabupaten: &nbsp;</p>
+                    <select class="button_filter" onchange="filterData()" name="kab" id="kab_filter" multiple="multiple" style="width: 200px"  ></select>
                 </span>
         
                 <span class="filterBox">
-                    <p class="button_filter">Kecamatan: &nbsp;</p>
-                    <select onchange= "filterData()" name="kec" id="kec_filter" multiple="multiple" style="width: 200px"></select>
+                    <p>Kecamatan: &nbsp;</p>
+                    <select class="button_filter" onchange= "filterData()" name="kec" id="kec_filter" multiple="multiple" style="width: 200px"></select>
                 </span>
         
                 <!-- <span class="filterBox">
@@ -211,14 +212,29 @@
                 </div>
             </div>
         </div>
-        
-
     <!-- isian -->
-    <script type = "module" src="index.js"></script>
-    <script>
+
+    <!-- <script type="module">
+        import {filterData} from "./index.js"
+        module.filterData = filterData
+    </script> -->
+
+    <!-- <script type="" src="test.js"></script> -->
+    <script type="module" src="index.js">    
+    
+    </script>
+    <script type="text/javascript" src="filterData.js">
+        
+    </script>
+    <script >
+        const testSelect = document.getElementById("test_select")
+        function test (){
+            console.log("testing",testSelect)
+        }
         $(document).ready(function() {
             $('.button_filter').select2();
         });
     </script>
+    </div>
 </body>
 </html>
