@@ -1,0 +1,245 @@
+/* * {
+margin: 0;
+padding: 0;
+background: rgba(54, 162, 235, 0.2);
+} */
+
+h1 {
+    width:80%;
+    margin: auto;
+    text-align: left;
+    font-family: Georgia;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    padding-top: 50px;
+}
+
+.description{
+    text-align: justify;
+    width: 80%;
+}
+
+#d1 {
+    width:80%;
+    text-align: justify;
+    align-content: center;
+    position: relative;
+margin: 0 auto;
+    font-family: Georgia;
+    font-size: 16px;
+}
+
+.summaryCard {
+    width: 80%;
+    height: 20vh;
+    display: flex;
+    margin: auto;
+    box-sizing: border;
+}
+
+.summaryCard .summaryBox_1 {
+    width: 100%;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: solid 2px #bee0ec;
+    background: #bee0ec;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.summaryCard .summaryBox_2 {
+    width: 100%;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: solid 2px #bee0ec;
+    background: #bee0ec;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.summaryCard .summaryBox_3 {
+    width: 100%;
+    padding-top: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: solid 2px #bee0ec;
+    background: #bee0ec;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.filterCard {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    box-sizing: border;
+}
+
+.filterBox_1 {
+    width: 30%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+
+    border-radius: 5px;
+    /* border: solid 2px black; */
+    background: white;
+    display: inline-block;
+    
+    margin-left:10%;
+}
+
+.filterBox_2 {
+    width: 60%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    /* border: solid 2px black; */
+    background: white;
+    display: inline;
+}
+
+.filterBox_3 {
+    width: 65%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    /* border: solid 2px black; */
+    background: white;
+    display: inline;
+
+}
+
+.filterBox_4 {
+    width: 45%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    /* border: solid 2px black; */
+    background: white;
+    display: inline;
+}
+
+.filterBox_5 {
+    width: 45%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    /* border: solid 2px black; */
+    background: white;
+    display: inline;
+
+    margin-right:10%;
+}
+
+.chartCard {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-sizing: border;
+}
+
+.chartBox_1{
+    width: 100%;
+    height:100%;
+    background: white;
+    margin-right: 10px;
+    border-radius: 5px;
+    /* border: 1px solid grey; */
+}
+
+#map_image{
+    width: 95%;
+    height:50%;
+    background: white;
+    margin-right: 10px;
+    /* border-radius: 5px;
+    border: 1px solid grey; */
+    text-align: center;
+    padding-left: 15px;
+}
+
+.chartBox_2 {
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.chartBox_3 {
+    width: 100%;
+    background: white;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.chartBox_4 {
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.chartBox_5 {
+    width: 100%;
+    background: white;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin-bottom: 50px;
+}
+
+.chartBox_6 {
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin-bottom: 50px;
+}
+.titleheat {
+    padding-left: 50px;
+    font-size: 22px;
+}
+.chartBox_7 {
+    width: 100%;
+    grid-template-columns: 1fr;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin-bottom: 50px;
+}
+.chartBox_8 {
+    width: 100%;
+    grid-template-columns: 1fr;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin-bottom: 50px;
+}

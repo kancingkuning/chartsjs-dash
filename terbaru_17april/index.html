@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+    <title>Arquero Data Preprocessing</title>
+    <script src="https://cdn.jsdelivr.net/npm/arquero@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2.0.1/dist/chartjs-chart-matrix.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script src="jquery-csv.js"></script>
+
+</head>
+<body>
+    <div class="title">
+        <h1>SISHIS Dashboard (Puskesmas) - Fasyankes Level</h1>
+    </div>
+
+    <div class="description" id="d1">
+        <p>Secure and Interoperable Surveillance and Health Information System
+            <br>
+            <br>
+            Development Progress : Single Dropdown Filter & Parent Dropdown Filter Controll
+            <br>
+            <br>
+            Sistem Kewaspadaan Dini dan Respon (SKDR) adalah suatu sistem yang dapat memantau perkembangan trend suatu penyakit menular potensial 
+            KLB/wabah dari waktu ke waktu (periode mingguan) dan memberikan sinyal peringatan (alert) kepada pengelola program bila kasus tersebut 
+            melebihi nilai ambang batasnya sehingga mendorong program untuk melakukan respons.</p>
+    </div>
+
+    <div class="summaryCard"> 
+        <div class="summaryBox_1">
+            <ui class="card_title" >Cumulative Cases</ui>
+            <p class="calc" id="cum_case"></p>
+            <p class="ket">Total Cases</p>
+        </div>
+
+        <div class="summaryBox_2">
+            <ui class="card_title">Total Visits</ui>
+            <p class="calc" id="tot_vis"></p>
+            <p class="ket">Total Cases</p>
+        </div>
+
+        <div class="summaryBox_3">
+            <ui class="card_title">Max Week</ui>
+            <p class="calc" id="week"></p>
+            <p class="ket"></p>
+        </div>
+    </div>
+
+    <div class="filterCard">
+        <div class="filterBox_1">
+            <p class="button_title">Provinsi &nbsp;&nbsp;</p>
+            <select name="prov" id="prov_filter" value="BALI"></select>
+        </div>
+
+        <div class="filterBox_2">
+            <p class="button_title">  Kabupaten &nbsp;&nbsp;</p>
+            <select name="kab" id="kab_filter" value="KAB. BADUNG"></select>
+        </div>
+
+        <div class="filterBox_3">
+            <p class="button_title">  Kecamatan  &nbsp;&nbsp;</p>
+            <select  name="kec" id="kec_filter" value="ABIANSEMAL"></select>
+        </div>
+
+        <div class="filterBox_4">
+            <p class="button_title">  Start Date &nbsp;&nbsp;</p>
+            <input  type="date" name="start_date" id="start_date" value="2022-01-01">
+        </div>
+
+        <div class="filterBox_5">
+            <p class="button_title">  End Date  &nbsp;&nbsp;</p>
+            <input  type="date" name="end_date" id="end_date" value="2022-12-31">
+        </div>
+    </div>
+
+    <div class="chartCard">
+        <div class="chartBox_1"> 
+            <div id="basicmap" style="height:450px"></div>
+        </div>
+        <div class="chartBox_2">
+            <canvas id="cba_chart"></canvas>
+        </div>
+    </div>
+
+    <div class="chartCard">
+        <div class="chartBox_3">
+            <canvas id="cdb_chart"></canvas>
+        </div>
+
+        <div class="chartBox_4">
+            <canvas id="cdt_chart"></canvas>
+        </div>
+    </div>
+
+    <div class="chartCard">
+        <div class="chartBox_5">
+            <canvas id="rdb_chart"></canvas>
+        </div>
+        <div class="chartBox_6">
+            <canvas id="rdt_chart"></canvas>
+        </div>
+    </div>
+    <div class="chartCard">
+        <div class="chartBox_7">
+            <p class="titleheat">Heatmap Disease x Kecamatan</p>
+            <canvas id="heat_chart"></canvas>
+        </div>
+    </div>
+    <div class="chartCard">
+        <div class="chartBox_8">
+            <p class="titleheat">Butterfly Chart</p>
+            <canvas id="but_chart"></canvas>
+        </div>
+    </div>
+    <!-- <div class class="chartCard">
+        <div class="chartBox_8">
+                <table id= "userdata">
+                    <thead>
+                            <th>Puskesmas</th>
+                            <th>Kecamatan</th>
+                            <th>Kabupaten</th>
+                            <th>Provinsi</th>
+                            <th>Longitude</th>
+                            <th>Latitude</th>
+                    </thead>
+                        <tbody>
+                
+                        </tbody>
+                </table>
+        </div> -->
+    </div>
+
+   
+
+    <script type = "module" src="index.js"></script>
+    <!-- <script>
+        // function cobadeh() {
+        //     return 0
+        // }
+        // const cobadeh = ()=>{}
+
+        // (function(){
+                                                                     
+        // })();
+
+        // <Button onClick={()=>{console.log('a')}}/>
+
+        // immediately invoke anonymous function
+        (()=>{})();
+
+        
+        // how to add marker from json
+        // step 1 : load json to variables
+        // step 2 : cari tau cara dapetin nama tempat, lan dan lon
+        // step 3 : assign salah satu array object 
+        // step 4 : looping
+    </script> -->
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script> -->
+    <script type="text/javascript" src="but_chart.js"></script>
+                                              
+</body>
+</html>

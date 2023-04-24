@@ -1,0 +1,1202 @@
+[
+  {
+    "No": 1,
+    "Nama Puskesmas": "ABIANSEMAL I",
+    "Kode Puskesmas": 1050038,
+    "Kecamatan": "ABIANSEMAL",
+    "Kabupaten": "BADUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1073,
+    "Latitude": -8.6134
+  },
+  {
+    "No": 2,
+    "Nama Puskesmas": "ABIANSEMAL II",
+    "Kode Puskesmas": 1050039,
+    "Kecamatan": "ABIANSEMAL",
+    "Kabupaten": "BADUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1073,
+    "Latitude": -8.613
+  },
+  {
+    "No": 3,
+    "Nama Puskesmas": "ABIANSEMAL III",
+    "Kode Puskesmas": 1050040,
+    "Kecamatan": "ABIANSEMAL",
+    "Kabupaten": "BADUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.2187,
+    "Latitude": -8.5698
+  },
+  {
+    "No": 4,
+    "Nama Puskesmas": "ABIANSEMAL IV",
+    "Kode Puskesmas": 1050041,
+    "Kecamatan": "ABIANSEMAL",
+    "Kabupaten": "BADUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.2148,
+    "Latitude": -8.5432
+  },
+  {
+    "No": 5,
+    "Nama Puskesmas": "KUTA I",
+    "Kode Puskesmas": 1050032,
+    "Kecamatan": "KUTA",
+    "Kabupaten": "BADUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1773,
+    "Latitude": -8.7296
+  },
+  {
+    "No": 6,
+    "Nama Puskesmas": "KUTA II",
+    "Kode Puskesmas": 1050033,
+    "Kecamatan": "KUTA",
+    "Kabupaten": "BADUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1694,
+    "Latitude": -8.7094
+  },
+  {
+    "No": 7,
+    "Nama Puskesmas": "KUTA SELATAN",
+    "Kode Puskesmas": 1050031,
+    "Kecamatan": "KUTA SELATAN",
+    "Kabupaten": "BADUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.2229,
+    "Latitude": -8.8033
+  },
+  {
+    "No": 8,
+    "Nama Puskesmas": "KUTA UTARA",
+    "Kode Puskesmas": 1050034,
+    "Kecamatan": "KUTA SELATAN",
+    "Kabupaten": "BADUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1712,
+    "Latitude": -8.6469
+  },
+  {
+    "No": 9,
+    "Nama Puskesmas": "MENGWI I",
+    "Kode Puskesmas": 1050035,
+    "Kecamatan": "MENGWI",
+    "Kabupaten": "BADUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1328,
+    "Latitude": -8.622
+  },
+  {
+    "No": 10,
+    "Nama Puskesmas": "MENGWI II",
+    "Kode Puskesmas": 1050036,
+    "Kecamatan": "MENGWI",
+    "Kabupaten": "BADUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1328,
+    "Latitude": -8.622
+  },
+  {
+    "No": 11,
+    "Nama Puskesmas": "MENGWI III",
+    "Kode Puskesmas": 1050037,
+    "Kecamatan": "MENGWI",
+    "Kabupaten": "BADUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1599,
+    "Latitude": -8.6136
+  },
+  {
+    "No": 12,
+    "Nama Puskesmas": "PETANG I",
+    "Kode Puskesmas": 1050042,
+    "Kecamatan": "PETANG",
+    "Kabupaten": "BADUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.2157,
+    "Latitude": -8.4007
+  },
+  {
+    "No": 13,
+    "Nama Puskesmas": "PETANG II",
+    "Kode Puskesmas": 1050043,
+    "Kecamatan": "PETANG",
+    "Kabupaten": "BADUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1869,
+    "Latitude": -8.3478
+  },
+  {
+    "No": 14,
+    "Nama Puskesmas": "BANGLI",
+    "Kode Puskesmas": 1050068,
+    "Kecamatan": "BANGLI",
+    "Kabupaten": "BANGLI",
+    "Provinsi": "BALI",
+    "Longitude": 115.3502,
+    "Latitude": -8.5008
+  },
+  {
+    "No": 15,
+    "Nama Puskesmas": "BANGLI UTARA",
+    "Kode Puskesmas": 1050069,
+    "Kecamatan": "BANGLI",
+    "Kabupaten": "BANGLI",
+    "Provinsi": "BALI",
+    "Longitude": 115.3356,
+    "Latitude": -8.3226
+  },
+  {
+    "No": 16,
+    "Nama Puskesmas": "KINTAMANI I",
+    "Kode Puskesmas": 1050072,
+    "Kecamatan": "KINTAMANI",
+    "Kabupaten": "BANGLI",
+    "Provinsi": "BALI",
+    "Longitude": 115.3549,
+    "Latitude": -8.2574
+  },
+  {
+    "No": 17,
+    "Nama Puskesmas": "KINTAMANI II",
+    "Kode Puskesmas": 1050075,
+    "Kecamatan": "KINTAMANI",
+    "Kabupaten": "BANGLI",
+    "Provinsi": "BALI",
+    "Longitude": 115.2135,
+    "Latitude": -8.1828
+  },
+  {
+    "No": 18,
+    "Nama Puskesmas": "KINTAMANI III",
+    "Kode Puskesmas": 1050073,
+    "Kecamatan": "KINTAMANI",
+    "Kabupaten": "BANGLI",
+    "Provinsi": "BALI",
+    "Longitude": 115.1783,
+    "Latitude": -8.2447
+  },
+  {
+    "No": 19,
+    "Nama Puskesmas": "KINTAMANI IV",
+    "Kode Puskesmas": 1050076,
+    "Kecamatan": "KINTAMANI",
+    "Kabupaten": "BANGLI",
+    "Provinsi": "BALI",
+    "Longitude": 115.3935,
+    "Latitude": -8.3084
+  },
+  {
+    "No": 20,
+    "Nama Puskesmas": "KINTAMANI V",
+    "Kode Puskesmas": 1050074,
+    "Kecamatan": "KINTAMANI",
+    "Kabupaten": "BANGLI",
+    "Provinsi": "BALI",
+    "Longitude": 115.3724,
+    "Latitude": -8.2284
+  },
+  {
+    "No": 21,
+    "Nama Puskesmas": "KINTAMANI VI",
+    "Kode Puskesmas": 1050077,
+    "Kecamatan": "KINTAMANI",
+    "Kabupaten": "BANGLI",
+    "Provinsi": "BALI",
+    "Longitude": 115.3136,
+    "Latitude": -8.2961
+  },
+  {
+    "No": 22,
+    "Nama Puskesmas": "SUSUT I",
+    "Kode Puskesmas": 1050066,
+    "Kecamatan": "SUSUT",
+    "Kabupaten": "BANGLI",
+    "Provinsi": "BALI",
+    "Longitude": 115.2472,
+    "Latitude": -8.4312
+  },
+  {
+    "No": 23,
+    "Nama Puskesmas": "SUSUT II",
+    "Kode Puskesmas": 1050067,
+    "Kecamatan": "SUSUT",
+    "Kabupaten": "BANGLI",
+    "Provinsi": "BALI",
+    "Longitude": 115.2472,
+    "Latitude": -8.4243
+  },
+  {
+    "No": 24,
+    "Nama Puskesmas": "TEMBUKU I",
+    "Kode Puskesmas": 1050070,
+    "Kecamatan": "TEMBUKU",
+    "Kabupaten": "BANGLI",
+    "Provinsi": "BALI",
+    "Longitude": 115.3631,
+    "Latitude": -8.3937
+  },
+  {
+    "No": 25,
+    "Nama Puskesmas": "TEMBUKU II",
+    "Kode Puskesmas": 1050071,
+    "Kecamatan": "TEMBUKU",
+    "Kabupaten": "BANGLI",
+    "Provinsi": "BALI",
+    "Longitude": 115.3631,
+    "Latitude": -8.3966
+  },
+  {
+    "No": 26,
+    "Nama Puskesmas": "BANJAR I",
+    "Kode Puskesmas": 1050097,
+    "Kecamatan": "BANJAR",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 114.7361,
+    "Latitude": -8.3484
+  },
+  {
+    "No": 27,
+    "Nama Puskesmas": "BANJAR II",
+    "Kode Puskesmas": 1050098,
+    "Kecamatan": "BANJAR",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 115.0235,
+    "Latitude": -8.2596
+  },
+  {
+    "No": 28,
+    "Nama Puskesmas": "BULELENG I",
+    "Kode Puskesmas": 1050101,
+    "Kecamatan": "BULELENG",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 114.9947,
+    "Latitude": -8.2716
+  },
+  {
+    "No": 29,
+    "Nama Puskesmas": "BULELENG II",
+    "Kode Puskesmas": 1050102,
+    "Kecamatan": "BULELENG",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 115.034,
+    "Latitude": -8.1572
+  },
+  {
+    "No": 30,
+    "Nama Puskesmas": "BULELENG III",
+    "Kode Puskesmas": 1050103,
+    "Kecamatan": "BULELENG",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1084,
+    "Latitude": -8.0995
+  },
+  {
+    "No": 31,
+    "Nama Puskesmas": "BUSUNGBIU I",
+    "Kode Puskesmas": 1050095,
+    "Kecamatan": "BUSUNGBIU",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 114.9669,
+    "Latitude": -8.2584
+  },
+  {
+    "No": 32,
+    "Nama Puskesmas": "BUSUNGBIU II",
+    "Kode Puskesmas": 1050096,
+    "Kecamatan": "BUSUNGBIU",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 114.8988,
+    "Latitude": -8.3087
+  },
+  {
+    "No": 33,
+    "Nama Puskesmas": "GEROKGAK I",
+    "Kode Puskesmas": 1050090,
+    "Kecamatan": "GEROKGAK",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 114.7722,
+    "Latitude": -8.214
+  },
+  {
+    "No": 34,
+    "Nama Puskesmas": "GEROKGAK II",
+    "Kode Puskesmas": 1050091,
+    "Kecamatan": "GEROKGAK",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1211,
+    "Latitude": -8.1205
+  },
+  {
+    "No": 35,
+    "Nama Puskesmas": "KUBUTAMBAHAN I",
+    "Kode Puskesmas": 1050106,
+    "Kecamatan": "KUBUTAMBAHAN",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1732,
+    "Latitude": -8.0774
+  },
+  {
+    "No": 36,
+    "Nama Puskesmas": "KUBUTAMBAHAN II",
+    "Kode Puskesmas": 1050107,
+    "Kecamatan": "KUBUTAMBAHAN",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1946,
+    "Latitude": -8.1307
+  },
+  {
+    "No": 37,
+    "Nama Puskesmas": "SAWAN I",
+    "Kode Puskesmas": 1050104,
+    "Kecamatan": "SAWAN",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1346,
+    "Latitude": -8.0888
+  },
+  {
+    "No": 38,
+    "Nama Puskesmas": "SAWAN II",
+    "Kode Puskesmas": 1050105,
+    "Kecamatan": "SAWAN",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1757,
+    "Latitude": -8.1376
+  },
+  {
+    "No": 39,
+    "Nama Puskesmas": "SERIRIT I",
+    "Kode Puskesmas": 1050092,
+    "Kecamatan": "SERIRIT",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 114.9346,
+    "Latitude": -8.1916
+  },
+  {
+    "No": 40,
+    "Nama Puskesmas": "SERIRIT II",
+    "Kode Puskesmas": 1050093,
+    "Kecamatan": "SERIRIT",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 114.8955,
+    "Latitude": -8.1994
+  },
+  {
+    "No": 41,
+    "Nama Puskesmas": "SERIRIT III",
+    "Kode Puskesmas": 1050094,
+    "Kecamatan": "SERIRIT",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 114.9432,
+    "Latitude": -8.2308
+  },
+  {
+    "No": 42,
+    "Nama Puskesmas": "SUKASADA I",
+    "Kode Puskesmas": 1050099,
+    "Kecamatan": "SUKASADA",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1078,
+    "Latitude": -8.1505
+  },
+  {
+    "No": 43,
+    "Nama Puskesmas": "SUKASADA II",
+    "Kode Puskesmas": 1050100,
+    "Kecamatan": "SUKASADA",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 115.0998,
+    "Latitude": -8.2721
+  },
+  {
+    "No": 44,
+    "Nama Puskesmas": "TEJAKULA I",
+    "Kode Puskesmas": 1050108,
+    "Kecamatan": "TEJAKULA",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 115.1461,
+    "Latitude": -8.1245
+  },
+  {
+    "No": 45,
+    "Nama Puskesmas": "TEJAKULA II",
+    "Kode Puskesmas": 1050109,
+    "Kecamatan": "TEJAKULA",
+    "Kabupaten": "BULELENG",
+    "Provinsi": "BALI",
+    "Longitude": 115.2775,
+    "Latitude": -8.1267
+  },
+  {
+    "No": 46,
+    "Nama Puskesmas": "BLAHBATUH I",
+    "Kode Puskesmas": 1050046,
+    "Kecamatan": "BLAHBATU",
+    "Kabupaten": "GIANYAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.3249,
+    "Latitude": -8.574
+  },
+  {
+    "No": 47,
+    "Nama Puskesmas": "BLAHBATUH II",
+    "Kode Puskesmas": 1050047,
+    "Kecamatan": "BLAHBATU",
+    "Kabupaten": "GIANYAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.1748,
+    "Latitude": -8.5914
+  },
+  {
+    "No": 48,
+    "Nama Puskesmas": "GIANYAR I",
+    "Kode Puskesmas": 1050048,
+    "Kecamatan": "GIANYAR",
+    "Kabupaten": "GIANYAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2921,
+    "Latitude": -8.5739
+  },
+  {
+    "No": 49,
+    "Nama Puskesmas": "GIANYAR II",
+    "Kode Puskesmas": 1050049,
+    "Kecamatan": "GIANYAR",
+    "Kabupaten": "GIANYAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2871,
+    "Latitude": -8.4782
+  },
+  {
+    "No": 50,
+    "Nama Puskesmas": "PAYANGAN",
+    "Kode Puskesmas": 1050056,
+    "Kecamatan": "PAYANGAN",
+    "Kabupaten": "GIANYAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2433,
+    "Latitude": -8.4221
+  },
+  {
+    "No": 51,
+    "Nama Puskesmas": "SUKAWATI I",
+    "Kode Puskesmas": 1050044,
+    "Kecamatan": "SUKAWATI",
+    "Kabupaten": "GIANYAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2601,
+    "Latitude": -8.5862
+  },
+  {
+    "No": 52,
+    "Nama Puskesmas": "SUKAWATI II",
+    "Kode Puskesmas": 1050045,
+    "Kecamatan": "SUKAWATI",
+    "Kabupaten": "GIANYAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.1523,
+    "Latitude": -8.5787
+  },
+  {
+    "No": 53,
+    "Nama Puskesmas": "TAMPAKSIRING I",
+    "Kode Puskesmas": 1050051,
+    "Kecamatan": "TAMPAKSIRING",
+    "Kabupaten": "GIANYAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.3047,
+    "Latitude": -8.4192
+  },
+  {
+    "No": 54,
+    "Nama Puskesmas": "TAMPAKSIRING II",
+    "Kode Puskesmas": 1050050,
+    "Kecamatan": "TAMPAKSIRING",
+    "Kabupaten": "GIANYAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2884,
+    "Latitude": -8.5114
+  },
+  {
+    "No": 55,
+    "Nama Puskesmas": "TEGALALANG I",
+    "Kode Puskesmas": 1050054,
+    "Kecamatan": "TEGALALANG",
+    "Kabupaten": "GIANYAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2934,
+    "Latitude": -8.392
+  },
+  {
+    "No": 56,
+    "Nama Puskesmas": "TEGALALANG II",
+    "Kode Puskesmas": 1050055,
+    "Kecamatan": "TEGALALANG",
+    "Kabupaten": "GIANYAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2965,
+    "Latitude": -8.3832
+  },
+  {
+    "No": 57,
+    "Nama Puskesmas": "UBUD I",
+    "Kode Puskesmas": 1050052,
+    "Kecamatan": "UBUD",
+    "Kabupaten": "GIANYAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.1546,
+    "Latitude": -8.51
+  },
+  {
+    "No": 58,
+    "Nama Puskesmas": "UBUD II",
+    "Kode Puskesmas": 1050053,
+    "Kecamatan": "UBUD",
+    "Kabupaten": "GIANYAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2528,
+    "Latitude": -8.5078
+  },
+  {
+    "No": 59,
+    "Nama Puskesmas": "I JEMBRANA",
+    "Kode Puskesmas": 1050006,
+    "Kecamatan": "JEMBRANA",
+    "Kabupaten": "JEMBRANA",
+    "Provinsi": "BALI",
+    "Longitude": 114.6647,
+    "Latitude": -8.379
+  },
+  {
+    "No": 60,
+    "Nama Puskesmas": "II JEMBRANA",
+    "Kode Puskesmas": 1050005,
+    "Kecamatan": "JEMBRANA",
+    "Kabupaten": "JEMBRANA",
+    "Provinsi": "BALI",
+    "Longitude": 114.6602,
+    "Latitude": -8.3941
+  },
+  {
+    "No": 61,
+    "Nama Puskesmas": "I MELAYA",
+    "Kode Puskesmas": 1050002,
+    "Kecamatan": "MELAYA",
+    "Kabupaten": "JEMBRANA",
+    "Provinsi": "BALI",
+    "Longitude": 114.614,
+    "Latitude": -8.3689
+  },
+  {
+    "No": 62,
+    "Nama Puskesmas": "II MELAYA",
+    "Kode Puskesmas": 1050001,
+    "Kecamatan": "MELAYA",
+    "Kabupaten": "JEMBRANA",
+    "Provinsi": "BALI",
+    "Longitude": 114.472,
+    "Latitude": -8.2471
+  },
+  {
+    "No": 63,
+    "Nama Puskesmas": "I MENDOYO",
+    "Kode Puskesmas": 1050007,
+    "Kecamatan": "MENDOYO",
+    "Kabupaten": "JEMBRANA",
+    "Provinsi": "BALI",
+    "Longitude": 114.7038,
+    "Latitude": -8.3845
+  },
+  {
+    "No": 64,
+    "Nama Puskesmas": "II MENDOYO",
+    "Kode Puskesmas": 1050008,
+    "Kecamatan": "MENDOYO",
+    "Kabupaten": "JEMBRANA",
+    "Provinsi": "BALI",
+    "Longitude": 114.7799,
+    "Latitude": -8.3374
+  },
+  {
+    "No": 65,
+    "Nama Puskesmas": "I NEGARA",
+    "Kode Puskesmas": 1050004,
+    "Kecamatan": "NEGARA",
+    "Kabupaten": "JEMBRANA",
+    "Provinsi": "BALI",
+    "Longitude": 114.6602,
+    "Latitude": -8.3941
+  },
+  {
+    "No": 66,
+    "Nama Puskesmas": "II NEGARA",
+    "Kode Puskesmas": 1050003,
+    "Kecamatan": "NEGARA",
+    "Kabupaten": "JEMBRANA",
+    "Provinsi": "BALI",
+    "Longitude": 114.613,
+    "Latitude": -8.3923
+  },
+  {
+    "No": 67,
+    "Nama Puskesmas": "I PEKUTATAN",
+    "Kode Puskesmas": 1050009,
+    "Kecamatan": "PEKUTATAN",
+    "Kabupaten": "JEMBRANA",
+    "Provinsi": "BALI",
+    "Longitude": 114.842,
+    "Latitude": -8.4208
+  },
+  {
+    "No": 68,
+    "Nama Puskesmas": "II PEKUTATAN",
+    "Kode Puskesmas": 1050010,
+    "Kecamatan": "PEKUTATAN",
+    "Kabupaten": "JEMBRANA",
+    "Provinsi": "BALI",
+    "Longitude": 114.8894,
+    "Latitude": -8.4294
+  },
+  {
+    "No": 69,
+    "Nama Puskesmas": "ABANG I",
+    "Kode Puskesmas": 1050084,
+    "Kecamatan": "ABANG",
+    "Kabupaten": "KARANG ASEM",
+    "Provinsi": "BALI",
+    "Longitude": 115.5449,
+    "Latitude": -8.3632
+  },
+  {
+    "No": 70,
+    "Nama Puskesmas": "ABANG II",
+    "Kode Puskesmas": 1050085,
+    "Kecamatan": "ABANG",
+    "Kabupaten": "KARANG ASEM",
+    "Provinsi": "BALI",
+    "Longitude": 115.609,
+    "Latitude": -8.3423
+  },
+  {
+    "No": 71,
+    "Nama Puskesmas": "BEBANDEM",
+    "Kode Puskesmas": 1050086,
+    "Kecamatan": "BEBANDEM",
+    "Kabupaten": "KARANG ASEM",
+    "Provinsi": "BALI",
+    "Longitude": 115.3748,
+    "Latitude": -8.3847
+  },
+  {
+    "No": 72,
+    "Nama Puskesmas": "KARANGASEM I",
+    "Kode Puskesmas": 1050083,
+    "Kecamatan": "KARANGASEM",
+    "Kabupaten": "KARANG ASEM",
+    "Provinsi": "BALI",
+    "Longitude": 115.5982,
+    "Latitude": -8.4861
+  },
+  {
+    "No": 73,
+    "Nama Puskesmas": "KARANGASEM II",
+    "Kode Puskesmas": 1050082,
+    "Kecamatan": "KARANGASEM",
+    "Kabupaten": "KARANG ASEM",
+    "Provinsi": "BALI",
+    "Longitude": 115.6608,
+    "Latitude": -8.4313
+  },
+  {
+    "No": 74,
+    "Nama Puskesmas": "KUBU I",
+    "Kode Puskesmas": 1050089,
+    "Kecamatan": "KUBU",
+    "Kabupaten": "KARANG ASEM",
+    "Provinsi": "BALI",
+    "Longitude": 115.5683,
+    "Latitude": -8.2533
+  },
+  {
+    "No": 75,
+    "Nama Puskesmas": "KUBU II",
+    "Kode Puskesmas": 1050088,
+    "Kecamatan": "KUBU",
+    "Kabupaten": "KARANG ASEM",
+    "Provinsi": "BALI",
+    "Longitude": 115.4971,
+    "Latitude": -8.1998
+  },
+  {
+    "No": 76,
+    "Nama Puskesmas": "MANGGIS I",
+    "Kode Puskesmas": 1050080,
+    "Kecamatan": "MANGGIS",
+    "Kabupaten": "KARANG ASEM",
+    "Provinsi": "BALI",
+    "Longitude": 115.2255,
+    "Latitude": -8.635
+  },
+  {
+    "No": 77,
+    "Nama Puskesmas": "MANGGIS II",
+    "Kode Puskesmas": 1050081,
+    "Kecamatan": "MANGGIS",
+    "Kabupaten": "KARANG ASEM",
+    "Provinsi": "BALI",
+    "Longitude": 115.5497,
+    "Latitude": -8.4953
+  },
+  {
+    "No": 78,
+    "Nama Puskesmas": "RENDANG",
+    "Kode Puskesmas": 1050078,
+    "Kecamatan": "RENDANG",
+    "Kabupaten": "KARANG ASEM",
+    "Provinsi": "BALI",
+    "Longitude": 115.4358,
+    "Latitude": -8.4096
+  },
+  {
+    "No": 79,
+    "Nama Puskesmas": "SELAT",
+    "Kode Puskesmas": 1050087,
+    "Kecamatan": "SELAT",
+    "Kabupaten": "KARANG ASEM",
+    "Provinsi": "BALI",
+    "Longitude": 115.4575,
+    "Latitude": -8.4544
+  },
+  {
+    "No": 80,
+    "Nama Puskesmas": "SIDEMEN",
+    "Kode Puskesmas": 1050079,
+    "Kecamatan": "SIDEMEN",
+    "Kabupaten": "KARANG ASEM",
+    "Provinsi": "BALI",
+    "Longitude": 115.4429,
+    "Latitude": -8.4841
+  },
+  {
+    "No": 81,
+    "Nama Puskesmas": "BANJARANGKAN I",
+    "Kode Puskesmas": 1050061,
+    "Kecamatan": "BANJARANGKAN",
+    "Kabupaten": "KLUNGKUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.3666,
+    "Latitude": -8.5449
+  },
+  {
+    "No": 82,
+    "Nama Puskesmas": "BANJARANGKAN II",
+    "Kode Puskesmas": 1050060,
+    "Kecamatan": "BANJARANGKAN",
+    "Kabupaten": "KLUNGKUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.3692,
+    "Latitude": -8.5582
+  },
+  {
+    "No": 83,
+    "Nama Puskesmas": "DAWAN I",
+    "Kode Puskesmas": 1050064,
+    "Kecamatan": "DAWAN",
+    "Kabupaten": "KLUNGKUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.4572,
+    "Latitude": -8.5299
+  },
+  {
+    "No": 84,
+    "Nama Puskesmas": "DAWAN II",
+    "Kode Puskesmas": 1050065,
+    "Kecamatan": "DAWAN",
+    "Kabupaten": "KLUNGKUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.423,
+    "Latitude": -8.5473
+  },
+  {
+    "No": 85,
+    "Nama Puskesmas": "KLUNGKUNG I",
+    "Kode Puskesmas": 1050062,
+    "Kecamatan": "KLUNGKUNG",
+    "Kabupaten": "KLUNGKUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.2985,
+    "Latitude": -8.5519
+  },
+  {
+    "No": 86,
+    "Nama Puskesmas": "KLUNGKUNG II",
+    "Kode Puskesmas": 1050063,
+    "Kecamatan": "KLUNGKUNG",
+    "Kabupaten": "KLUNGKUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.362,
+    "Latitude": -8.4965
+  },
+  {
+    "No": 87,
+    "Nama Puskesmas": "NUSA PENIDA I",
+    "Kode Puskesmas": 1050057,
+    "Kecamatan": "NUSA PENIDA",
+    "Kabupaten": "KLUNGKUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.4683,
+    "Latitude": -8.6969
+  },
+  {
+    "No": 88,
+    "Nama Puskesmas": "NUSA PENIDA II",
+    "Kode Puskesmas": 1050058,
+    "Kecamatan": "NUSA PENIDA",
+    "Kabupaten": "KLUNGKUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.4473,
+    "Latitude": -8.6788
+  },
+  {
+    "No": 89,
+    "Nama Puskesmas": "NUSA PENIDA III",
+    "Kode Puskesmas": 1050059,
+    "Kecamatan": "NUSA PENIDA",
+    "Kabupaten": "KLUNGKUNG",
+    "Provinsi": "BALI",
+    "Longitude": 115.5204,
+    "Latitude": -8.7201
+  },
+  {
+    "No": 90,
+    "Nama Puskesmas": "I DENPASAR BARAT",
+    "Kode Puskesmas": 1050117,
+    "Kecamatan": "DENPASAR BARAT",
+    "Kabupaten": "KOTA DENPASAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.1706,
+    "Latitude": -8.6873
+  },
+  {
+    "No": 91,
+    "Nama Puskesmas": "II DENPASAR BARAT",
+    "Kode Puskesmas": 1050116,
+    "Kecamatan": "DENPASAR BARAT",
+    "Kabupaten": "KOTA DENPASAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.186,
+    "Latitude": -8.6873
+  },
+  {
+    "No": 92,
+    "Nama Puskesmas": "I DENPASAR SELATAN",
+    "Kode Puskesmas": 1050111,
+    "Kecamatan": "DENPASAR SELATAN",
+    "Kabupaten": "KOTA DENPASAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2052,
+    "Latitude": -8.6949
+  },
+  {
+    "No": 93,
+    "Nama Puskesmas": "II DENPASAR SELATAN",
+    "Kode Puskesmas": 1050112,
+    "Kecamatan": "DENPASAR SELATAN",
+    "Kabupaten": "KOTA DENPASAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.255,
+    "Latitude": -8.6831
+  },
+  {
+    "No": 94,
+    "Nama Puskesmas": "III DENPASAR SELATAN",
+    "Kode Puskesmas": 1050113,
+    "Kecamatan": "DENPASAR SELATAN",
+    "Kabupaten": "KOTA DENPASAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2052,
+    "Latitude": -8.6949
+  },
+  {
+    "No": 95,
+    "Nama Puskesmas": "IV DENPASAR SELATAN",
+    "Kode Puskesmas": 1050110,
+    "Kecamatan": "DENPASAR SELATAN",
+    "Kabupaten": "KOTA DENPASAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2078,
+    "Latitude": -8.6953
+  },
+  {
+    "No": 96,
+    "Nama Puskesmas": "I DENPASAR TIMUR",
+    "Kode Puskesmas": 1050114,
+    "Kecamatan": "DENPASAR TIMUR",
+    "Kabupaten": "KOTA DENPASAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2352,
+    "Latitude": -8.667
+  },
+  {
+    "No": 97,
+    "Nama Puskesmas": "II DENPASAR TIMUR",
+    "Kode Puskesmas": 1050115,
+    "Kecamatan": "DENPASAR TIMUR",
+    "Kabupaten": "KOTA DENPASAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2424,
+    "Latitude": -8.6144
+  },
+  {
+    "No": 98,
+    "Nama Puskesmas": "I DENPASAR UTARA",
+    "Kode Puskesmas": 1050118,
+    "Kecamatan": "DENPASAR UTARA",
+    "Kabupaten": "KOTA DENPASAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.1989,
+    "Latitude": -8.6567
+  },
+  {
+    "No": 99,
+    "Nama Puskesmas": "II DENPASAR UTARA",
+    "Kode Puskesmas": 1050119,
+    "Kecamatan": "DENPASAR UTARA",
+    "Kabupaten": "KOTA DENPASAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.1989,
+    "Latitude": -8.6567
+  },
+  {
+    "No": 100,
+    "Nama Puskesmas": "III DENPASAR UTARA",
+    "Kode Puskesmas": 1050120,
+    "Kecamatan": "DENPASAR UTARA",
+    "Kabupaten": "KOTA DENPASAR",
+    "Provinsi": "BALI",
+    "Longitude": 115.2075,
+    "Latitude": -8.6349
+  },
+  {
+    "No": 101,
+    "Nama Puskesmas": "BATURITI I",
+    "Kode Puskesmas": 1050025,
+    "Kecamatan": "BATURITI",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.1819,
+    "Latitude": -8.3912
+  },
+  {
+    "No": 102,
+    "Nama Puskesmas": "BATURITI II",
+    "Kode Puskesmas": 1050026,
+    "Kecamatan": "BATURITI",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.197,
+    "Latitude": -8.4304
+  },
+  {
+    "No": 103,
+    "Nama Puskesmas": "KEDIRI I",
+    "Kode Puskesmas": 1050020,
+    "Kecamatan": "KEDIRI",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.1326,
+    "Latitude": -8.5849
+  },
+  {
+    "No": 104,
+    "Nama Puskesmas": "KEDIRI II",
+    "Kode Puskesmas": 1050021,
+    "Kecamatan": "KEDIRI",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.1222,
+    "Latitude": -8.593
+  },
+  {
+    "No": 105,
+    "Nama Puskesmas": "KEDIRI III",
+    "Kode Puskesmas": 1050022,
+    "Kecamatan": "KEDIRI",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.1222,
+    "Latitude": -8.5929
+  },
+  {
+    "No": 106,
+    "Nama Puskesmas": "KERAMBITAN I",
+    "Kode Puskesmas": 1050015,
+    "Kecamatan": "KERAMBITAN",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.0782,
+    "Latitude": -8.5313
+  },
+  {
+    "No": 107,
+    "Nama Puskesmas": "KERAMBITAN II",
+    "Kode Puskesmas": 1050016,
+    "Kecamatan": "KERAMBITAN",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.0541,
+    "Latitude": -8.5111
+  },
+  {
+    "No": 108,
+    "Nama Puskesmas": "MARGA I",
+    "Kode Puskesmas": 1050023,
+    "Kecamatan": "MARGA",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.1682,
+    "Latitude": -8.4806
+  },
+  {
+    "No": 109,
+    "Nama Puskesmas": "MARGA II",
+    "Kode Puskesmas": 1050024,
+    "Kecamatan": "MARGA",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.1525,
+    "Latitude": -8.5174
+  },
+  {
+    "No": 110,
+    "Nama Puskesmas": "PENEBEL I",
+    "Kode Puskesmas": 1050027,
+    "Kecamatan": "PENEBEL",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.1397,
+    "Latitude": -8.4368
+  },
+  {
+    "No": 111,
+    "Nama Puskesmas": "PENEBEL II",
+    "Kode Puskesmas": 1050028,
+    "Kecamatan": "PENEBEL",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.1231,
+    "Latitude": -8.4367
+  },
+  {
+    "No": 112,
+    "Nama Puskesmas": "PUPUAN I",
+    "Kode Puskesmas": 1050029,
+    "Kecamatan": "PUPUAN",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.0553,
+    "Latitude": -8.4365
+  },
+  {
+    "No": 113,
+    "Nama Puskesmas": "PUPUAN II",
+    "Kode Puskesmas": 1050030,
+    "Kecamatan": "PUPUAN",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.0553,
+    "Latitude": -8.4365
+  },
+  {
+    "No": 114,
+    "Nama Puskesmas": "SELEMADEG",
+    "Kode Puskesmas": 1050011,
+    "Kecamatan": "SELEMADEG",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.0258,
+    "Latitude": -8.5043
+  },
+  {
+    "No": 115,
+    "Nama Puskesmas": "SELEMADEG BARAT",
+    "Kode Puskesmas": 1050014,
+    "Kecamatan": "SELEMADEG BARAT",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 114.9604,
+    "Latitude": -8.494
+  },
+  {
+    "No": 116,
+    "Nama Puskesmas": "SELEMADEG TIMUR I",
+    "Kode Puskesmas": 1050012,
+    "Kecamatan": "SELEMADEG TIMUR",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.0493,
+    "Latitude": -8.4963
+  },
+  {
+    "No": 117,
+    "Nama Puskesmas": "SELEMADEG TIMUR II",
+    "Kode Puskesmas": 1050013,
+    "Kecamatan": "SELEMADEG TIMUR",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.0165,
+    "Latitude": -8.4962
+  },
+  {
+    "No": 118,
+    "Nama Puskesmas": "TABANAN I",
+    "Kode Puskesmas": 1050018,
+    "Kecamatan": "TABANAN",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.0929,
+    "Latitude": -8.5516
+  },
+  {
+    "No": 119,
+    "Nama Puskesmas": "TABANAN II",
+    "Kode Puskesmas": 1050019,
+    "Kecamatan": "TABANAN",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.1013,
+    "Latitude": -8.5404
+  },
+  {
+    "No": 120,
+    "Nama Puskesmas": "TABANAN III",
+    "Kode Puskesmas": 1050017,
+    "Kecamatan": "TABANAN",
+    "Kabupaten": "TABANAN",
+    "Provinsi": "BALI",
+    "Longitude": 115.1242,
+    "Latitude": -8.5327
+  }
+]

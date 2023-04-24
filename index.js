@@ -145,9 +145,6 @@ var cum_case_dsp = document.getElementById("cum_case");
 var visit_dsp = document.getElementById("tot_vis");
 var week_dsp = document.getElementById("week");
 
-
-
-
 cum_case_dsp.innerHTML = cum_case;
 visit_dsp.innerHTML = visit;
 week_dsp.innerHTML = week;
@@ -627,99 +624,106 @@ let line_rdt = new Chart(cta, {
     }
 });
 
-/// fsy x dis heatmap
-// let data_6 = dt_filter
-//             .filter(d => d.penyakit == 'ILI (Penyakit Serupa Influenza')
-//             .groupby('fasyankes')
-//             .rollup({jumlah_kasus: d => op.sum(d.kasus)})
-//             .orderby('tanggal');
+prov_filter.addEventListener('change', filterData);
+kab_filter.addEventListener('change', filterData);
+kec_filter.addEventListener('change', filterData2);
+start_date.addEventListener('change', filterData);
+end_date.addEventListener('change', filterData);
+//////////
 
-// console.log("Group By")
-// console.log(data_6.print());
+// fsy x dis heatmap
+let data_6 = dt_filter
+            .filter(d => d.penyakit == 'ILI (Penyakit Serupa Influenza')
+            .groupby('kecamatan')
+            .rollup({jumlah_kasus: d => op.sum(d.kasus)})
+            .orderby('tanggal');
 
-// const hm_data = {
-//     labels: [... new Set(data_6.array('tanggal'))],
-//     datasets: [
-//         {
-//             label: 'ILI (Penyakit Serupa Influenza)',
-//             data: data_6.filter(d => d.penyakit === 'ILI (Penyakit Serupa Influenza').array('jumlah_kasus')
-//         }
-//     ]
-// }
+console.log("Group By")
+console.log(data_6.print());
 
-// const ctb = document.getElementById("hm_disweek");
-// console.log(ctb);
-// let hm_disweek = new Chart(ctb, {
-//     type: 'matrix',
-//     data: hm_data,
-//     options: {
-//         plugins: {
-//             legend: true,
-//             tooltip: {
-//                 callbacks: {
-//                     title() {
-//                         return '';
-//                     },
-//                     label(context) {
-//                         const v = context.dataset.data[context.dataIndex];
-//                         return ['Tanggal: ' + d.tanggal, 'Fasyankes: ' + d.fasyankes, 'Kasus: ' + d.jumlah_kasus];
-//                     }
-//                 }
-//             }
-//         },
-//         scales: {
-//             y: {
-//                 beginAtZero: true,
-//                 title: {
-//                     display: true,
-//                     text: 'Tanggal'
-//                 }
-//             },
-//             x: {
-//                 title: {
-//                     display: true,
-//                     text: 'Fasyankes'
-//                 }
-//             },
-//             indexAxis: y,
-//             plugins: {
-//                 title: {
-//                     display: true,
-//                     position: 'top',
-//                     align: 'center',
-//                     text: 'Heatmap Fasyankes x Disease',
-//                     font: {
-//                         size: 18
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// });
+const hm_data = {
+    labels: [... new Set(data_6.array('tanggal'))],
+    datasets: [
+        {
+            label: 'ILI (Penyakit Serupa Influenza)',
+            data: data_6.filter(d => d.penyakit === 'ILI (Penyakit Serupa Influenza').array('jumlah_kasus')
+        }
+    ]
+}
 
-///
+const ctd = document.getElementById("hm_disweek");
+console.log(ctd);
+let hm_disweek = new Chart(ctd, {
+    type: 'matrix',
+    data: hm_data,
+    options: {
+        plugins: {
+            legend: true,
+            tooltip: {
+                callbacks: {
+                    title() {
+                        return '';
+                    },
+                    label(context) {
+                        const v = context.dataset.data[context.dataIndex];
+                        return ['Tanggal: ' + d.tanggal, 'Fasyankes: ' + d.fasyankes, 'Kasus: ' + d.jumlah_kasus];
+                    }
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Tanggal'
+                }
+            },
+            x: {
+                title: {
+                    display: true,
+                    text: 'Fasyankes'
+                }
+            },
+            indexAxis: y,
+            plugins: {
+                title: {
+                    display: true,
+                    position: 'top',
+                    align: 'center',
+                    text: 'Heatmap Fasyankes x Disease',
+                    font: {
+                        size: 18
+                    }
+                }
+            }
+        }
+    }
+});
 
-// prov_filter.addEventListener('change', filterData);
-// kab_filter.addEventListener('change', filterData);
-// kec_filter.addEventListener('change', filterData);
-// // fks_filter.addEventListener('change', filterData);
-// start_date.addEventListener('change', filterData);
-// end_date.addEventListener('change', filterData);
 
-// function updateFilterDropdown() {
+prov_filter.addEventListener('change', filterData);
+kab_filter.addEventListener('change', filterData);
+kec_filter.addEventListener('change', filterData);
+// fks_filter.addEventListener('change', filterData);
+start_date.addEventListener('change', filterData);
+end_date.addEventListener('change', filterData);
 
-// }
+function updateFilterDropdown() {
+
+}
 
 
 
 // Filter Data Function
 
 
+const test = dt.numRows();
+console.log('asd',test);
 
 
 
-// Coba 
-// kab_array = dt.['kabupaten'];
+// let kab_array = dt.array('kabupaten');
 // let heatmap = dt
 // .params({
 // kab:kab_array
@@ -729,4 +733,7 @@ let line_rdt = new Chart(cta, {
 
 // console.log('coba');
 
+
+// console.log('coba kedua');
+// let kab = dt.kabupaten();
 
